@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="664.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnoo_super_shop.FXMLDocumentController">
+   <children>
+      <Separator layoutX="868.0" layoutY="134.0" orientation="VERTICAL" prefHeight="34.0" prefWidth="6.0" />
+      <Separator layoutX="938.0" layoutY="111.0" prefHeight="6.0" prefWidth="198.0" />
+      <Text fill="#0429ae" layoutX="304.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Outlet : 7340 - Hospital Road Nilphamari Outlet" wrappingWidth="390.93670654296875">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#0429ae" layoutX="715.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User : " wrappingWidth="78.79998779296875">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#0429ae" layoutX="901.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terminal : " wrappingWidth="78.40000000000032">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Text>
+      <Separator layoutY="76.0" prefHeight="2.0" prefWidth="1141.0" style="-fx-background-color: black;" />
+      <AnchorPane layoutX="14.0" layoutY="86.0" prefHeight="565.0" prefWidth="846.0" style="-fx-border-color: black;">
+         <children>
+            <TextField fx:id="itemScanField" layoutX="17.0" layoutY="33.0" prefHeight="26.0" prefWidth="153.0" style="-fx-border-color: blue;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="16.8" layoutY="15.0" prefHeight="18.0" prefWidth="153.0" style="-fx-text-alignment: center; -fx-background-color: blue; -fx-alignment: center; -fx-border-color: blue; -fx-border-height: 12;" text="Item id/Barcode" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerField" layoutX="356.0" layoutY="33.0" prefHeight="26.0" prefWidth="153.0" style="-fx-border-color: blue;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="356.0" layoutY="15.0" prefHeight="18.0" prefWidth="153.0" style="-fx-text-alignment: center; -fx-background-color: blue; -fx-alignment: center; -fx-border-color: blue; -fx-border-height: 12;" text="Customer" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberField" layoutX="518.0" layoutY="33.0" prefHeight="26.0" prefWidth="153.0" style="-fx-border-color: blue;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="518.0" layoutY="15.0" prefHeight="18.0" prefWidth="153.0" style="-fx-text-alignment: center; -fx-background-color: blue; -fx-alignment: center; -fx-border-color: blue; -fx-border-height: 12;" text="Number" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberField1" layoutX="681.0" layoutY="33.0" prefHeight="26.0" prefWidth="71.0" style="-fx-border-color: blue;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="681.0" layoutY="15.0" prefHeight="18.0" prefWidth="71.0" style="-fx-text-alignment: center; -fx-background-color: blue; -fx-alignment: center; -fx-border-color: blue; -fx-border-height: 12;" text="Points" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberField11" layoutX="764.0" layoutY="33.0" prefHeight="26.0" prefWidth="71.0" style="-fx-border-color: blue;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="764.0" layoutY="15.0" prefHeight="18.0" prefWidth="71.0" style="-fx-text-alignment: center; -fx-background-color: blue; -fx-alignment: center; -fx-border-color: blue; -fx-border-height: 12;" text="Amount" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="taable" layoutX="17.0" layoutY="73.0" prefHeight="361.0" prefWidth="819.0">
+              <columns>
+                <TableColumn fx:id="codeCol" prefWidth="169.59997177124023" text="Code" />
+                <TableColumn fx:id="descriptionCol" prefWidth="377.6000518798828" text="Description" />
+                  <TableColumn fx:id="priceCol" prefWidth="128.800048828125" text="Unit Price" />
+                  <TableColumn fx:id="quantityCol" minWidth="0.0" prefWidth="146.4000244140625" text="Quantity" />
+              </columns>
+            </TableView>
+            <Text layoutX="17.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code:" wrappingWidth="60.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="codeField" layoutX="17.0" layoutY="469.0" prefHeight="26.0" prefWidth="154.0" promptText="Enter Code">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Text layoutX="209.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" wrappingWidth="154.39999999999992">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="desscriptionField" layoutX="209.0" layoutY="469.0" prefHeight="26.0" prefWidth="154.0" promptText="Enter Description">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Text layoutX="427.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price :" wrappingWidth="97.60000000000014">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="priceField" layoutX="423.0" layoutY="469.0" prefHeight="26.0" prefWidth="154.0" promptText="Price">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Text layoutX="632.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity :" wrappingWidth="97.60000000000014">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="quantityField" layoutX="630.0" layoutY="469.0" prefHeight="26.0" prefWidth="154.0" promptText="Quantity">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutX="277.0" layoutY="506.0" mnemonicParsing="false" onAction="#submitOnAction" prefHeight="34.0" prefWidth="98.0" text="Submit" />
+            <Button layoutX="426.0" layoutY="506.0" mnemonicParsing="false" onAction="#delItemOnAction" prefHeight="34.0" prefWidth="98.0" text="Delete Item" />
+            <Button layoutX="573.0" layoutY="506.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="34.0" prefWidth="98.0" text="Clear" />
+         </children></AnchorPane>
+      <Text fill="#0429ae" layoutX="746.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version - 4.0.1" wrappingWidth="78.79998779296875">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fill="#0429ae" layoutX="897.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last invoice :" wrappingWidth="78.79998779296875">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Text>
+      <Label fx:id="lastInvoiceField" layoutX="985.0" layoutY="38.0" prefHeight="18.0" prefWidth="146.0" textFill="#0429ae">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="userField" layoutX="768.0" layoutY="5.0" prefHeight="18.0" prefWidth="130.0" textFill="#0429ae">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="274.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@up_Logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="870.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. of Items : ">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="itemNoField" layoutX="985.0" layoutY="80.0" prefHeight="26.0" prefWidth="53.0" style="-fx-alignment: center; -fx-background-color: black;" textAlignment="CENTER" textFill="#fffd00">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="868.0" layoutY="104.0" mnemonicParsing="false" onAction="#holdInvoiceOnAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-radius: 0; -fx-border-color: black;" text="Hold Invoive" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="9.0" />
+         </font>
+      </Button>
+      <Separator layoutX="869.0" layoutY="147.0" prefHeight="6.0" prefWidth="266.0" />
+      <Separator layoutX="1134.0" layoutY="114.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="6.0" />
+      <Button layoutX="965.0" layoutY="121.0" mnemonicParsing="false" onAction="#recallInvoiceOnAction" prefHeight="19.0" prefWidth="78.0" style="-fx-background-radius: 0; -fx-border-color: black;" text="Recall Invoice" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="9.0" />
+         </font>
+      </Button>
+      <TextField fx:id="recallInvoiceField" layoutX="1059.0" layoutY="119.0" prefHeight="25.0" prefWidth="60.0" />
+      <AnchorPane layoutX="867.0" layoutY="153.0" prefHeight="150.0" prefWidth="267.0" style="-fx-background-color: black;">
+         <children>
+            <AnchorPane layoutX="3.0" layoutY="1.0" prefHeight="149.0" prefWidth="264.0" style="-fx-border-color: white;">
+               <children>
+                  <Separator layoutX="6.0" layoutY="102.0" prefHeight="6.0" prefWidth="248.0" />
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" layoutX="8.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MRP Total        : " wrappingWidth="156.80000000000018">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="mrpField" layoutX="172.0" layoutY="10.0" prefHeight="18.0" prefWidth="88.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="9.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(+)SD                 :" wrappingWidth="156.80000000000018">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="sdField" layoutX="171.0" layoutY="28.0" prefHeight="18.0" prefWidth="88.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="8.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(-)Discount        :" wrappingWidth="156.80000000000018">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="discountField" layoutX="172.0" layoutY="78.0" prefHeight="18.0" prefWidth="88.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="10.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total                    :" wrappingWidth="156.80000000000018">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="totalSield" layoutX="172.0" layoutY="108.0" prefHeight="18.0" prefWidth="88.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="1138.0" layoutY="154.0" orientation="VERTICAL" prefHeight="156.0" prefWidth="6.0" />
+      <Separator layoutX="870.0" layoutY="311.0" prefHeight="6.0" prefWidth="263.0" />
+      <Separator layoutX="865.0" layoutY="318.0" orientation="VERTICAL" prefHeight="292.0" prefWidth="6.0" />
+      <AnchorPane layoutX="876.0" layoutY="317.0" prefHeight="302.0" prefWidth="266.0" style="-fx-border-color: black;">
+         <children>
+            <Line endX="78.4000244140625" endY="219.4000244140625" layoutX="65.0" layoutY="81.0" startX="78.20001220703125" startY="-78.20001220703125" strokeWidth="2.0" />
+            <Label layoutX="3.0" layoutY="-2.0" prefHeight="26.0" prefWidth="138.0" style="-fx-alignment: center;" text="Tender Details">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="147.0" prefHeight="26.0" prefWidth="113.0" style="-fx-alignment: center;" text="Amount">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="3.0" layoutY="23.0" prefHeight="3.0" prefWidth="255.0" />
+            <Label layoutX="1.0" layoutY="32.0" prefHeight="16.0" prefWidth="141.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="Brac Bank">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="64.0" prefHeight="18.0" prefWidth="141.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="Eastern Bank">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="90.0" prefHeight="18.0" prefWidth="142.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="Ecom Cash">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="144.0" prefHeight="12.0" prefWidth="142.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="Nagad">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="116.0" prefHeight="18.0" prefWidth="141.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="ECom Online">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="166.0" prefHeight="16.0" prefWidth="141.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="MTB Card">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="213.0" prefHeight="18.0" prefWidth="141.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="PBL">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="190.0" prefHeight="18.0" prefWidth="141.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="MTB QR">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="238.0" prefHeight="16.0" prefWidth="141.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="Round off">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="278.0" prefHeight="22.0" prefWidth="142.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="Cash Recieve">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="259.0" prefHeight="18.0" prefWidth="142.0" style="-fx-border-color: black; -fx-background-color: #aefbff;" text="Paidable Amount">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="roundOffField" layoutX="144.0" layoutY="238.0" prefHeight="6.0" prefWidth="119.0" style="-fx-border-color: white; -fx-background-color: black; -fx-text-fill: #fff300;">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="paidableField" layoutX="144.0" layoutY="257.0" minWidth="-Infinity" prefHeight="19.0" prefWidth="119.0" style="-fx-border-color: white; -fx-background-color: black; -fx-text-fill: #fff300;">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="bracBankField" layoutX="145.0" layoutY="25.0" prefHeight="10.0" prefWidth="118.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="cashRecieveField" layoutX="144.0" layoutY="278.0" prefHeight="10.0" prefWidth="118.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="pblBankField" layoutX="145.0" layoutY="212.0" prefHeight="3.0" prefWidth="117.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="mtbQRField" layoutX="145.0" layoutY="187.0" prefHeight="10.0" prefWidth="117.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="mtbCardField" layoutX="145.0" layoutY="162.0" prefHeight="10.0" prefWidth="118.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nagadField" layoutX="145.0" layoutY="139.0" prefHeight="10.0" prefWidth="118.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="ecomonlineBAnkField" layoutX="145.0" layoutY="112.0" prefHeight="10.0" prefWidth="118.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="ecomCashBankfield" layoutX="145.0" layoutY="86.0" prefHeight="10.0" prefWidth="118.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="easternBankField" layoutX="145.0" layoutY="59.0" prefHeight="10.0" prefWidth="118.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Button layoutX="985.0" layoutY="632.0" mnemonicParsing="false" onAction="#printOnAction" prefWidth="70.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0; -fx-border-width: 0 1 1 0; -fx-border-color: black;" text="Print" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Separator layoutX="867.0" layoutY="624.0" prefHeight="6.0" prefWidth="277.0" />
+      <Button layoutX="881.0" layoutY="632.0" mnemonicParsing="false" onAction="#reprintInvoiceOnAction" prefHeight="23.0" prefWidth="97.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0; -fx-border-width: 0 1 1 0; -fx-border-color: black;" text="Reprint Invoice" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="1063.0" layoutY="632.0" mnemonicParsing="false" onAction="#exitOnAction" prefHeight="23.0" prefWidth="68.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0; -fx-border-width: 0 1 1 0; -fx-border-color: black;" text="Exit" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+      </Button>
+      <Label fx:id="terminalField" layoutX="972.0" layoutY="5.0" prefHeight="18.0" prefWidth="168.0" textFill="#0429ae">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
