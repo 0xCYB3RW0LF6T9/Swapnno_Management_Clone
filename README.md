@@ -27,6 +27,15 @@ The system allows a cashier to:
 The project is built with JavaFX and follows a controller-based architecture using FXML for the user interface.
 
 ---
+## Screen Shot of the project
+<img src="./pictures/1.png" style="height:400px;">
+<img src="./pictures/2.png" style="height:400px;">
+<img src="./pictures/3.png" style="height:400px;">
+<img src="./pictures/4.png" style="height:400px;">
+
+
+
+
 
 ## ✨ Features
 
